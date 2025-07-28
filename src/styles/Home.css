@@ -207,6 +207,15 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+  .hero-stat-items {
+    gap: 12px 4vw;
+  }
+  .hero-btn {
+    width: 98vw;
+  }
+}
+
 
 
 
