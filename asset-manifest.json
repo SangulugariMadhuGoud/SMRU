@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SMRU/static/css/main.a5a9b3d3.css",
+    "main.js": "/SMRU/static/js/main.b782b840.js",
+    "static/media/herosection.jpg": "/SMRU/static/media/herosection.af58a90b6663e14a234c.jpg",
+    "index.html": "/SMRU/index.html",
+    "main.a5a9b3d3.css.map": "/SMRU/static/css/main.a5a9b3d3.css.map",
+    "main.b782b840.js.map": "/SMRU/static/js/main.b782b840.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5a9b3d3.css",
+    "static/js/main.b782b840.js"
+  ]
+}
