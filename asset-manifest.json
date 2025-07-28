@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/SMRU/static/css/main.a5a9b3d3.css",
-    "main.js": "/SMRU/static/js/main.b782b840.js",
-    "static/media/herosection.jpg": "/SMRU/static/media/herosection.af58a90b6663e14a234c.jpg",
-    "index.html": "/SMRU/index.html",
-    "main.a5a9b3d3.css.map": "/SMRU/static/css/main.a5a9b3d3.css.map",
-    "main.b782b840.js.map": "/SMRU/static/js/main.b782b840.js.map"
+    "main.css": "/static/css/main.b3f7344f.css",
+    "main.js": "/static/js/main.7e91453f.js",
+    "static/media/herosection.jpg": "/static/media/herosection.af58a90b6663e14a234c.jpg",
+    "static/media/Logo.png": "/static/media/Logo.696d2d54bed6520138d8.png",
+    "static/media/kvk.jpg": "/static/media/kvk.5d1d9f85aed1c92e0313.jpg",
+    "static/media/indu.jpg": "/static/media/indu.285f93231f75efd77660.jpg",
+    "static/media/Bharathi.jpg": "/static/media/Bharathi.cbbcc29f5ddf02dc8b7d.jpg",
+    "static/media/harsha.jpg": "/static/media/harsha.4eba8485344258102d1a.jpg",
+    "index.html": "/index.html",
+    "main.b3f7344f.css.map": "/static/css/main.b3f7344f.css.map",
+    "main.7e91453f.js.map": "/static/js/main.7e91453f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5a9b3d3.css",
-    "static/js/main.b782b840.js"
+    "static/css/main.b3f7344f.css",
+    "static/js/main.7e91453f.js"
   ]
 }
