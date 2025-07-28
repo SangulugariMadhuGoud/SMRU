@@ -1,0 +1,329 @@
+
+/* Admissions banner styling */
+.admissions-banner {
+  background: linear-gradient(to right, #1c3c88, #10bb82);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.admissions-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4aa00;
+}
+
+.admissions-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.admissions-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.apply-button,
+.brochure-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none; 
+  transition: all 0.3s ease-in-out;
+}
+
+.apply-button {
+  background-color: #20b24b;
+  color: white;
+}
+
+.apply-button:hover {
+  background-color: #1b9a40;
+}
+
+.brochure-button {
+  background-color: white;
+  color: #0d315c;
+  border: none;
+}
+
+.brochure-button:hover {
+  background-color: #e8e8e8;
+  color: #0d315c;
+  border: none; 
+}
+
+.arrow-icon,
+.download-icon {
+  font-size: 14px;
+}
+
+
+/* Applicatin Process section styling */
+
+/* Application Section */
+.application-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0d0d0d;
+}
+
+.app-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Progress Bar */
+.app-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 10px;
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #1f2937;
+  transition: width 0.3s ease;
+}
+
+/* Steps Grid */
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Step Card */
+.step-card {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.step-card .step-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.step-card .step-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.step-card .step-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Step Number Badge */
+.step-number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #111;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+/* Status-specific styles */
+.step-card.completed {
+  background-color: #e7f9ef;
+  border: 1.5px solid #10bb82;
+}
+
+.step-card.completed .step-icon {
+  background-color: #10bb82;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.step-card.inprogress {
+  background-color: #eaf2ff;
+  border: 1.5px solid #3b82f6;
+}
+
+.step-card.pending {
+  background-color: #f9fafb;
+  opacity: 0.85;
+}
+
+/* Info Box */
+.note-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: 40px auto 0 auto; /* 🟢 add margin-top: 40px */
+  padding: 15px 20px;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+
+.note-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-progress {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .step-number {
+    top: 8px;
+    right: 8px;
+    font-size: 0.75rem;
+  }
+
+  .step-card .step-title {
+    font-size: 1rem;
+  }
+
+  .step-card .step-desc {
+    font-size: 0.85rem;
+  }
+}
+
+/* Required Documents section styling */
+
+.required-docs-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.docs-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0d0d0d;
+  margin-bottom: 10px;
+}
+
+.docs-subtitle {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.doc-item:hover {
+  background-color: #f0fdf4;
+  border-color: #86efac;
+}
+
+.doc-icon {
+  font-size: 22px;
+  color: #3b82f6;
+  margin-right: 15px;
+  background-color: #e0f2fe;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.doc-text {
+  font-size: 16px;
+  color: #111827;
+  text-align: left;
+}
+
+.note-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.note-icon {
+  font-size: 18px;
+  margin-top: 2px;
+}

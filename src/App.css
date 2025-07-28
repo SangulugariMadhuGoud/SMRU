@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #0d315c;
+  --green: #10bb82;
+  --accent: #f4aa00;
+  --radius: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: #f8fafb;
+  color: #1d253c;
+  margin: 0;
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.floating-apply-button-vertical {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1200;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0;
+  width: 52px;
+  height: 168px;
+  box-shadow: 0 6px 22px #0d315c33;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.05em;
+  transition: background 0.17s, transform 0.14s;
 }
 
-.App-link {
-  color: #61dafb;
+.floating-apply-button-vertical span {
+  transform: rotate(180deg);
+  font-size: 1.08rem;
+  letter-spacing: 0.04em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.floating-apply-button-vertical:hover,
+.floating-apply-button-vertical:focus {
+  background: var(--navy);
+  transform: translateY(-50%) scale(1.07);
+}
+
+.floating-whatsapp-button {
+  position: fixed;
+  right: 14px;
+  bottom: 24px;
+  z-index: 1201;
+}
+
+.floating-whatsapp-button img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #26ff00;
+  box-shadow: 0 2px 16px #10bb8266;
+  padding: 5px;
+  transition: transform 0.13s, box-shadow 0.14s;
+}
+
+.floating-whatsapp-button:hover img {
+  transform: scale(1.09);
+  box-shadow: 0 7px 26px #10bb82cc;
+}
+
+.apply-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 36, 60, 0.18);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadein 0.15s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.apply-modal-content {
+  background: #fff;
+  padding: 32px 24px 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 14px 50px #0d315c44;
+  min-width: 300px;
+  max-width: 400px;
+  width: 95vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 14px;
+  top: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  font-size: 1.17rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #f4aa0055;
+  transition: background 0.14s, transform 0.12s;
+}
+
+.modal-close-button:hover {
+  background: #e19400;
+  transform: scale(1.09);
+}
+
+.apply-modal-content h2 {
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.application-type-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.type-button {
+  flex: 1 1 100px;
+  padding: 8px 0;
+  border: 1.3px solid var(--navy);
+  background: #f8fafb;
+  color: var(--navy);
+  border-radius: 30px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.type-button.active,
+.type-button:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  padding: 9px 11px;
+  font-size: 0.98rem;
+  border: 1.1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f8fafb;
+  margin-bottom: 10px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  transition: border-color 0.13s;
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.apply-form button[type="submit"] {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.13s;
+  margin-top: 2px;
+}
+
+.apply-form button[type="submit"]:hover {
+  background: var(--navy);
+}
+
+.apply-form h3 {
+  color: var(--navy);
+  margin-bottom: 7px;
+  font-size: 1.01rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .floating-apply-button-vertical {
+    width: 38px;
+    height: 110px;
+    font-size: 0.93rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .floating-apply-button-vertical span {
+    font-size: 0.87rem;
+  }
+
+  .floating-whatsapp-button {
+    right: 12px;
+    bottom: 17px;
+  }
+
+  .floating-whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 2px 16px #10bb8299, 0 0 0 7px #f8fafb;
+  }
+
+  .apply-modal-content {
+    padding: 16px 6vw 14px;
+    max-width: 98vw;
   }
 }
