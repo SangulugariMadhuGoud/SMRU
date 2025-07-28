@@ -173,36 +173,40 @@ body {
   .hero-title {
     font-size: 2rem;
   }
-
   .hero-subtitle {
     font-size: 1rem;
   }
-
   .hero-buttons {
     flex-direction: column;
     gap: 16px;
   }
-
   .hero-btn {
     width: 90vw;
   }
-
+  /* Updated stats layout for mobile: 2 per row */
   .hero-stat-items {
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 8vw;
+    width: 100%;
+    justify-items: center;
   }
-
+  .hero-stat-item {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
   .hero-stat-item strong {
     font-size: 1.5rem;
   }
-
   .hero-stat-item span {
     font-size: 0.9rem;
   }
-
   .hero-container {
     padding: 60px 4vw;
   }
 }
+
 
 
 
