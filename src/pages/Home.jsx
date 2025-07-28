@@ -1,6 +1,8 @@
 import React, { useState, useCallback, memo } from 'react';
 import '../styles/Home.css';
 import { useNavigate } from 'react-router-dom';
+
+import heroImg from '../assets/herosection.jpg';  // adjust path as needed
 // ADD THIS LINE
 import useOpenApply from '../hooks/useOpenApply';
 
@@ -89,26 +91,43 @@ const Home = () => {
     <>
       {/* HERO SECTION */}
       <section className="hero-section">
+        {/* Background image */}
+        <img src={heroImg} alt="Rehabilitation Empowerment" className="hero-bg-image" />
+
         <div className="hero-container">
           <h1 className="hero-title">
             Empowering Through <span className="hero-highlight">Rehabilitation</span>
           </h1>
+
           <p className="hero-subtitle">
             India's leading university for aspiring healthcare professionals. Discover what makes us the preferred choice for students making a difference for patients across the nation.
           </p>
+
           <div className="hero-buttons">
-            {/* Use the context-powered Apply Now modal */}
             <button className="hero-btn hero-apply" onClick={openApplyModal}>Apply Now</button>
             <button className="hero-btn hero-brochure" onClick={handleDownloadBrochure}>Download Brochure</button>
           </div>
+
           <section className="hero-stats-section">
             <div className="hero-stats">
               <h3 className="hero-achievements-title">Achievements Done by St. Mary's Group</h3>
               <div className="hero-stat-items">
-                <div className="hero-stat-item"><strong>29+</strong><span>Years Experience</span></div>
-                <div className="hero-stat-item"><strong>9.6L+</strong><span>Alumni</span></div>
-                <div className="hero-stat-item"><strong>96%</strong><span>Placement Rate</span></div>
-                <div className="hero-stat-item"><strong>102+</strong><span>Recruiters</span></div>
+                <div className="hero-stat-item">
+                  <strong>29+</strong>
+                  <span>Years Experience</span>
+                </div>
+                <div className="hero-stat-item">
+                  <strong>9.6L+</strong>
+                  <span>Alumni</span>
+                </div>
+                <div className="hero-stat-item">
+                  <strong>96%</strong>
+                  <span>Placement Rate</span>
+                </div>
+                <div className="hero-stat-item">
+                  <strong>102+</strong>
+                  <span>Recruiters</span>
+                </div>
               </div>
             </div>
           </section>

@@ -1,6 +1,10 @@
 import React from 'react';
 import '../styles/About.css';
-// import campusImage from '../assets/smru-campus.png';
+import campusImage from '../assets/herosection.jpg'; // Replace with actual campus image path
+import founderImg from '../assets/kvk.jpg';
+import bharathiImg from '../assets/Bharathi.jpg';
+import harshaImg from '../assets/harsha.jpg';
+import induImg from '../assets/indu.jpg';
 
 // mission and vision icons
 import { FaEye, FaBullseye } from 'react-icons/fa';
@@ -92,25 +96,25 @@ const About = () => {
             name: "Dr. K.V.K. Rao",
             title: "Founder, Chairman & Chancellor",
             description: "Visionary educationist and founder with a mission to empower youth through rehabilitation science.",
-            image: "/founder.png" // Replace with actual image path
+            image: founderImg // Replace with actual image path
         },
         {
-            name: "Smt.K.V.N.V Bharathi.",
+            name: "Smt. K.V.N.V Bharathi",
             title: "Co-Founder & Pro-Chancellor",
             description: "Driving force behind SMRU’s student-first initiatives and inclusive education.",
-            image: "/Bharathi.jpg" // Replace with actual image path
+            image: bharathiImg
         },
         {
-            name: "Mr.K.Sri Harsha.",
+            name: "Mr. K. Sri Harsha",
             title: "Secretary & CEO",
             description: "Strategic leader managing institutional growth, digital transformation, and academic outreach.",
-            image: "/harsha.jpg" // Replace with actual image path
+            image: harshaImg
         },
         {
-            name: "Smt.K.Indu Aparna.",
+            name: "Smt. K. Indu Aparna",
             title: "Joint Secretary & COO",
             description: "Committed to operational excellence and stakeholder coordination across departments.",
-            image: "/Indu.jpg" // Replace with actual image path
+            image: induImg
         }
     ];
 
@@ -143,7 +147,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="who-image">
-                        <img src="/herosection.jpg" alt="SMRU Campus" /> {/* Replace with a relevant image */}
+                        <img src={campusImage} alt="SMRU Campus" /> {/* Replace with a relevant image */}
                     </div>
                 </div>
             </section>
@@ -249,7 +253,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Our Leadership Team */}
             {/* Our Leadership Team */}
             <section className="leadership-section">
                 <h2 className="leadership-title">Leadership Team</h2>

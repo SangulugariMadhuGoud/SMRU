@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
+import logo from '../assets/Logo.png'; // Adjust the path as necessary
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
 <div className="logo">
   <Link to="/" className="logo-link" onClick={closeMenu}>
     <img
-      src="/logo.png"
+      src={logo}
       alt="SMRU Logo"
       className="logo-img"
     />
